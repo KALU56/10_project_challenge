@@ -1,25 +1,22 @@
-class TodoModel {
+class CreateTodoModel {
   final String id;
   final String title;
   final bool done;
   final DateTime createdAt;
-  final DateTime? updatedAt;
 
-  TodoModel({
+  CreateTodoModel({
     required this.id,
     required this.title,
     required this.done,
     required this.createdAt,
-    this.updatedAt,
   });
 
-  factory TodoModel.fromMap(Map<String, dynamic> map) {
-    return TodoModel(
-      id: map['id'] as String,
-      title: map['title'] as String,
-      done: map['done'] as bool,
+  factory CreateTodoModel.fromMap(Map<String, dynamic> map) {
+    return CreateTodoModel(
+      id: map['id'],
+      title: map['title'],
+      done: map['done'],
       createdAt: DateTime.parse(map['created_at']),
-      updatedAt: map['updated_at'] != null ? DateTime.parse(map['updated_at']) : null,
     );
   }
 
@@ -29,7 +26,6 @@ class TodoModel {
       'title': title,
       'done': done,
       'created_at': createdAt.toIso8601String(),
-      if (updatedAt != null) 'updated_at': updatedAt!.toIso8601String(),
     };
   }
 }

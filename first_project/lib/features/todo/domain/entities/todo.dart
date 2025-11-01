@@ -1,15 +1,19 @@
-class Todo {
+class TodoEntity {
   final String id;
   final String title;
-  final String description;
   final bool isDone;
   final DateTime createdAt;
+  final DateTime? updatedAt;
+  final DateTime? restoredAt;
+  final String? status; // for delete or action status
 
-  Todo({
+  TodoEntity({
     required this.id,
     required this.title,
-    required this.description,
     required this.isDone,
     required this.createdAt,
+    this.updatedAt,
+    this.restoredAt,
+    this.status,
   });
 }
