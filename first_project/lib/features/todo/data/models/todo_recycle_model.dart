@@ -1,20 +1,20 @@
-class TodoDto {
+class TodoRecycleDto {
   final String id;
   final String title;
   final bool done;
-  final String createdAt;
+  final String restoredAt;
 
-  TodoDto({
+  TodoRecycleDto({
     required this.id,
     required this.title,
     required this.done,
-    required this.createdAt,
+    required this.restoredAt,
   });
 
-  factory TodoDto.fromJson(Map<String, dynamic> json) => TodoDto(
+  factory TodoRecycleDto.fromJson(Map<String, dynamic> json) => TodoRecycleDto(
         id: json['id'],
         title: json['title'],
         done: json['done'],
-        createdAt: json['created_at'],
+        restoredAt: json['restored_at'],
       );
 }
