@@ -1,5 +1,5 @@
 
-import 'package:first_project/features/todo/presentation/widgets/todo_list.dart';
+import 'package:first_project/features/todo/presentation/widgets/todo_item.dart';
 import 'package:flutter/material.dart';
 
 // Todo model
