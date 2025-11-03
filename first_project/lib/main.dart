@@ -1,3 +1,4 @@
+import 'package:first_project/core/theme/app_theme.dart';
 import 'package:first_project/features/todo/presentation/pages/todo_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-    
-      home: const TodoPage(), // 👈 your page here
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system, // Use system theme automatically
+      home: const TodoPage(),
     );
   }
 }
