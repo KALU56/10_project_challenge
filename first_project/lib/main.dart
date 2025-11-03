@@ -13,9 +13,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.system, // Use system theme automatically
+
+      // Use your custom ThemeData from core
+      theme: AppTheme.lightTheme.copyWith(
+        useMaterial3: true, // Optional: enable Material 3
+      ),
+      darkTheme: AppTheme.darkTheme.copyWith(
+        useMaterial3: true,
+      ),
+      themeMode: ThemeMode.system, // Automatically switch light/dark
+
       home: const TodoPage(),
     );
   }
