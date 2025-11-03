@@ -53,13 +53,16 @@ class _TodoPageState extends State<TodoPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            Text('Todo APP'),
-            Icon(Icons.calendar_today),
-          ],
-        ),
+        title: const Text('Todo APP'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.calendar_today),
+            onPressed: () {
+              print('Calendar icon pressed');
+              // TODO: Add calendar functionality
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
