@@ -1,5 +1,6 @@
 import 'package:first_project/core/theme/app_theme.dart';
 import 'package:first_project/features/todo/presentation/pages/todo_page.dart';
+import 'package:first_project/features/todo/presentation/pages/todo_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,12 +19,10 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme.copyWith(
         useMaterial3: true, // Optional: enable Material 3
       ),
-      darkTheme: AppTheme.darkTheme.copyWith(
-        useMaterial3: true,
-      ),
+   
       themeMode: ThemeMode.system, // Automatically switch light/dark
 
-      home: const TodoPage(),
+      home: const TodoScreen(),
     );
   }
 }
